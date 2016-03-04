@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title> Ian's Page</title>
+    <base href = "/">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel ="stylesheet" href= "/assets/css/style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+     <script src="/angular-route/angular-route.js"></script>
+      <script src = "/app/app.js"></script>
+      <script src = "/app/app.routes.js"></script>
+
+
+
+
+  </head>
+  <body ng-app = "routerApp" class = "jumbotron">
+
+    <header>
+<nav class="navbar navbar-default header">
+<div class="navbar-header">
+<a class="navbar-brand" href="/"></a>
+</div>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+<li><a href="/about"><i class="fa fa-shield"></i> About</a></li>
+<li><a href="/projects"><i class="fa fa-shield"></i> Projects</a></li>
+<li><a href="/contact"><i class="fa fa-comment"></i> Contact</a></li>
+</ul> </nav>
+</header>
+<div class = "container-fluid">
+    <div ng-controller = "mainController as main" class =  " text-center main">
+    <h2 ng-repeat= "message in main.message" class = "main">{{message}}</h1>
+    </div>
+  <div ng-view class = "view"></div>
+  </div>
+  </body>
+</html>

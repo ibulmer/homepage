@@ -1,0 +1,20 @@
+<div class = "project" ng-repeat = "project in projects.array" >
+  <div class="row">
+<div class = "col-md-2 about"></div>
+<h1 class = "col-md-8 about text-center">{{project.title}}</h1>
+<div class = "col-md-2 about"></div>
+</div>
+  <div class = "row">
+    <div class = "col-md-2 about"></div>
+    <div class = "col-md-8 about text-center">{{project.description}}</div>
+    <div class = "col-md-2 about"></div>
+  </div>
+  <div class = "row">
+    <div class = "col-md-2 about"></div>
+    <div class = "col-md-8 about text-center"><a href = {{project.link}}>{{project.link}}</a></div>
+    <div class = "col-md-2 about"></div>
+  </div>
+  <div class = "row">
+    <div class = "col-md-4 about text-center" ng-repeat = "picture in project.screenshots"><img src = {{picture}} class = "pic"></div>
+  </div>
+</div>
